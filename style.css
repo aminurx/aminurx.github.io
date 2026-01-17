@@ -1,3 +1,152 @@
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.75;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.6);
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.hero-buttons a:hover {
+  background: white;
+  color: #2a5298;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.navbar a {
+  margin: 0 14px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a5298;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 1050px;
+  margin: 70px auto;
+  padding: 20px;
+}
+
+.section.alt {
+  background: white;
+  padding: 45px;
+  border-radius: 14px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3c72;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+/* ===== LIST ===== */
+.info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.info-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ===== METRICS ===== */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.metric-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== PUBLICATIONS ===== */
+.bibbase-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
 /* ===============================
    GLOBAL RESET & VARIABLES
 ================================ */
@@ -40,7 +189,7 @@ body {
   color: #fff;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
 /* PROFILE LEFT */
@@ -50,12 +199,13 @@ body {
 }
 
 .profile-box img {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  border: 4px solid rgba(255,255,255,0.8);
+  width: 70px;
+  height: 80px;
+  border-radius: 10%;
+  border: 2px solid rgba(255,255,255,0.8);
   object-fit: cover;
   margin-right: 18px;
+  object-position: center top;
 }
 
 .profile-text h1 {
@@ -183,6 +333,10 @@ body {
   border-bottom: 1px solid #e1e5ee;
 }
 
+#about {
+    text-align: justify;
+}
+
 /* ===============================
    BIBBASE
 ================================ */
@@ -203,23 +357,32 @@ body {
    CONTACT
 ================================ */
 .contact-list {
-  text-align: center;
+  text-align:left;
   font-size: 1.1rem;
+  margin-left: 20%;
 }
 
 .contact-list p {
   margin: 12px 0;
+  justify-content:space-between;
 }
 
 .contact-list a {
   color: var(--secondary);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .contact-list a:hover {
   text-decoration: underline;
 }
+
+.contact-list img {
+  width: 25px;
+  height: 15px;
+}
+
+
 
 /* ===============================
    FOOTER
@@ -264,4 +427,26 @@ body {
     font-size: 1.05rem;
   }
 }
+.contact-card a {
+  color: white;
+  text-decoration: none;
+  word-break: break-word;
+}
 
+
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  margin-top: 80px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
